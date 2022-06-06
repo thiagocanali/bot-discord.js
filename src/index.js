@@ -1,6 +1,7 @@
 require('dotenv').config();
 const { Client, Intents, Collection } = require('discord.js');
 
+const linkVoltz = 'ϟ';
 const linkGrandeFamilia = 'https://www.youtube.com/watch?v=JtANtnDxEyk';
 const linkMila = 'https://www.tiktok.com/@owo.mila/video/7104339955895291141';
 const linkBia = 'https://www.youtube.com/c/Froid/videos';
@@ -35,6 +36,12 @@ client.on('messageCreate', (message) => {
     if (message.content === 'ping') {
         message.channel.send(`Pong! O ping do bot é de estimados ${client.ws.ping} ms`)
     }
+    if (message.content === '!ready') {
+        message.channel.send(`bot carregado com sucesso! o bot está no ar!`);
+    }
+    if (message.content === 'voltz') {
+        message.channel.send(`meu criador @Voltz#5339, estou a seu dispor! ${linkVoltz}`);
+    }
     if (message.content === 'guto') {
         message.channel.send(`salve gutinn, ja assistiu a musica da grande família hoje? lembra q é sexta mano! ${linkGrandeFamilia}`);
     }
@@ -48,7 +55,7 @@ client.on('messageCreate', (message) => {
         message.channel.send(`bom dia marizinhaaa! bó formatar um pc hoje?? KKKK ${linkMari}`);
     }
     if (message.content === 'tati') {
-        message.channel.send(`bom dia tatiizinhaaa! bão bisurdo?  ${linkTati}`);
+        message.channel.send(`bom dia tatiizinhaaa! (bu) c tá bão?  ${linkTati}`);
     }
     if (message.content === 'buga') {
         message.channel.send(`bom dia duozinhooo!  ${linkBuga}`);
